@@ -1,0 +1,56 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SRE Status Dashboard</title>
+        <style>
+            body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 40px auto; max-width: 800px; padding: 20px; background-color: #f6f8fa; color: #24292f; }
+            h1 { border-bottom: 1px solid #d0d7de; padding-bottom: 10px; }
+            table { width: 100%; border-collapse: collapse; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-radius: 6px; overflow: hidden; }
+            th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #d0d7de; }
+            th { background-color: #f6f8fa; font-weight: 600; }
+            .operational { color: #1a7f37; font-weight: bold; }
+            .down { color: #cf222e; font-weight: bold; }
+            .footer { margin-top: 20px; font-size: 0.9em; color: #57606a; text-align: center; }
+        </style>
+    </head>
+    <body>
+        <h1>System Status Dashboard</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Service Endpoint</th>
+                    <th>Current Status</th>
+                    <th>Latency (ms)</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+                <tr>
+                    <td><a href="https://api.github.com" target="_blank">GitHub API</a></td>
+                    <td class="operational">Operational 🟢</td>
+                    <td>160</td>
+                </tr>
+        
+                <tr>
+                    <td><a href="https://www.google.com" target="_blank">Google</a></td>
+                    <td class="operational">Operational 🟢</td>
+                    <td>100</td>
+                </tr>
+        
+                <tr>
+                    <td><a href="https://httpstat.us/500" target="_blank">Broken Endpoint</a></td>
+                    <td class="down">Down 🔴</td>
+                    <td>N/A</td>
+                </tr>
+        
+            </tbody>
+        </table>
+        <div class="footer">
+            Automated check completed at: 2026-07-29 21:09:01 UTC
+        </div>
+    </body>
+    </html>
+    
